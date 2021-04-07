@@ -111,15 +111,44 @@
         <!--Feed View Controller-->
         <scene sceneID="bGl-mE-63H">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fa3-D7-M4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FeedVC" id="EaP-Yg-OTG" customClass="FeedViewController" customModule="GiphyGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6oW-jx-dcA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="SBe-iy-wIu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qko-qU-0lt">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1ax-NB-Qzs">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cfi-tj-Znx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cfi-tj-Znx" firstAttribute="trailing" secondItem="Qko-qU-0lt" secondAttribute="trailing" id="F5T-H0-20b"/>
+                            <constraint firstItem="Qko-qU-0lt" firstAttribute="leading" secondItem="cfi-tj-Znx" secondAttribute="leading" id="GN6-bH-thE"/>
+                            <constraint firstItem="Qko-qU-0lt" firstAttribute="top" secondItem="SBe-iy-wIu" secondAttribute="bottom" id="I9P-Md-Vla"/>
+                            <constraint firstItem="SBe-iy-wIu" firstAttribute="trailing" secondItem="cfi-tj-Znx" secondAttribute="trailing" id="IJj-4l-TVT"/>
+                            <constraint firstItem="SBe-iy-wIu" firstAttribute="leading" secondItem="cfi-tj-Znx" secondAttribute="leading" id="h1x-Jn-12N"/>
+                            <constraint firstItem="cfi-tj-Znx" firstAttribute="bottom" secondItem="Qko-qU-0lt" secondAttribute="bottom" id="ix1-S3-WWH"/>
+                            <constraint firstItem="SBe-iy-wIu" firstAttribute="top" secondItem="cfi-tj-Znx" secondAttribute="top" id="vGL-aB-4QM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Qko-qU-0lt" id="F1w-eX-dq8"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fa3-D7-M4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1646" y="953"/>
         </scene>

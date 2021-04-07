@@ -18,7 +18,11 @@
 		1F2AF1EA261D265A00B56C33 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AF1E9261D265A00B56C33 /* CountryManager.swift */; };
 		1F2AF1F6261D288300B56C33 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AF1F5261D288300B56C33 /* CountryViewController.swift */; };
 		1F2AF1F9261D2B3E00B56C33 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AF1F8261D2B3E00B56C33 /* RatingViewController.swift */; };
-		1F2AF1FC261D3CFB00B56C33 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AF1FB261D3CFB00B56C33 /* FeedViewController.swift */; };
+		1F2AF200261DEE2400B56C33 /* GifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AF1FE261DEE2400B56C33 /* GifCollectionViewCell.swift */; };
+		1F2AF201261DEE2400B56C33 /* GifCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2AF1FF261DEE2400B56C33 /* GifCollectionViewCell.xib */; };
+		1F2AF209261DF03B00B56C33 /* GifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AF208261DF03B00B56C33 /* GifModel.swift */; };
+		1F2AF20C261DF1EF00B56C33 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AF20B261DF1EF00B56C33 /* UserModel.swift */; };
+		1F2AF210261DF89B00B56C33 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AF20F261DF89B00B56C33 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +38,11 @@
 		1F2AF1E9261D265A00B56C33 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
 		1F2AF1F5261D288300B56C33 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 		1F2AF1F8261D2B3E00B56C33 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
-		1F2AF1FB261D3CFB00B56C33 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1F2AF1FE261DEE2400B56C33 /* GifCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F2AF1FF261DEE2400B56C33 /* GifCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifCollectionViewCell.xib; sourceTree = "<group>"; };
+		1F2AF208261DF03B00B56C33 /* GifModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifModel.swift; sourceTree = "<group>"; };
+		1F2AF20B261DF1EF00B56C33 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1F2AF20F261DF89B00B56C33 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		2ABA634B651E3F4D68FB8E24 /* Pods-GiphyGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyGo.debug.xcconfig"; path = "Target Support Files/Pods-GiphyGo/Pods-GiphyGo.debug.xcconfig"; sourceTree = "<group>"; };
 		44E3FD91098F7B92E76E1A13 /* Pods-GiphyGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyGo.release.xcconfig"; path = "Target Support Files/Pods-GiphyGo/Pods-GiphyGo.release.xcconfig"; sourceTree = "<group>"; };
 		F6740D92482929CB34DC825F /* Pods_GiphyGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiphyGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,18 +83,54 @@
 			children = (
 				1F2AF1C2261D1E3F00B56C33 /* AppDelegate.swift */,
 				1F2AF1C4261D1E3F00B56C33 /* SceneDelegate.swift */,
-				1F2AF1C6261D1E3F00B56C33 /* OnBoardingScreenViewController.swift */,
 				1F2AF1C8261D1E3F00B56C33 /* Main.storyboard */,
 				1F2AF1CB261D1E4100B56C33 /* Assets.xcassets */,
 				1F2AF1CD261D1E4100B56C33 /* LaunchScreen.storyboard */,
 				1F2AF1D0261D1E4100B56C33 /* Info.plist */,
-				1F2AF1E6261D24BF00B56C33 /* NetworkManager.swift */,
-				1F2AF1E9261D265A00B56C33 /* CountryManager.swift */,
-				1F2AF1F5261D288300B56C33 /* CountryViewController.swift */,
-				1F2AF1F8261D2B3E00B56C33 /* RatingViewController.swift */,
-				1F2AF1FB261D3CFB00B56C33 /* FeedViewController.swift */,
+				1F2AF207261DF02300B56C33 /* Models */,
+				1F2AF206261DEFEA00B56C33 /* Helper Classes */,
+				1F2AF205261DEFD600B56C33 /* Controllers */,
+				1F2AF203261DEFC700B56C33 /* Views */,
 			);
 			path = GiphyGo;
+			sourceTree = "<group>";
+		};
+		1F2AF203261DEFC700B56C33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F2AF1FE261DEE2400B56C33 /* GifCollectionViewCell.swift */,
+				1F2AF1FF261DEE2400B56C33 /* GifCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F2AF205261DEFD600B56C33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F2AF1C6261D1E3F00B56C33 /* OnBoardingScreenViewController.swift */,
+				1F2AF1F5261D288300B56C33 /* CountryViewController.swift */,
+				1F2AF1F8261D2B3E00B56C33 /* RatingViewController.swift */,
+				1F2AF20F261DF89B00B56C33 /* FeedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1F2AF206261DEFEA00B56C33 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1F2AF1E6261D24BF00B56C33 /* NetworkManager.swift */,
+				1F2AF1E9261D265A00B56C33 /* CountryManager.swift */,
+			);
+			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		1F2AF207261DF02300B56C33 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F2AF208261DF03B00B56C33 /* GifModel.swift */,
+				1F2AF20B261DF1EF00B56C33 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7D357C19A91B909A3EB6CFF8 /* Pods */ = {
@@ -167,6 +211,7 @@
 			files = (
 				1F2AF1CF261D1E4100B56C33 /* LaunchScreen.storyboard in Resources */,
 				1F2AF1CC261D1E4100B56C33 /* Assets.xcassets in Resources */,
+				1F2AF201261DEE2400B56C33 /* GifCollectionViewCell.xib in Resources */,
 				1F2AF1CA261D1E3F00B56C33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,12 +267,15 @@
 			files = (
 				1F2AF1E7261D24BF00B56C33 /* NetworkManager.swift in Sources */,
 				1F2AF1C7261D1E3F00B56C33 /* OnBoardingScreenViewController.swift in Sources */,
+				1F2AF200261DEE2400B56C33 /* GifCollectionViewCell.swift in Sources */,
 				1F2AF1C3261D1E3F00B56C33 /* AppDelegate.swift in Sources */,
+				1F2AF209261DF03B00B56C33 /* GifModel.swift in Sources */,
 				1F2AF1F6261D288300B56C33 /* CountryViewController.swift in Sources */,
 				1F2AF1EA261D265A00B56C33 /* CountryManager.swift in Sources */,
+				1F2AF210261DF89B00B56C33 /* FeedViewController.swift in Sources */,
 				1F2AF1C5261D1E3F00B56C33 /* SceneDelegate.swift in Sources */,
-				1F2AF1FC261D3CFB00B56C33 /* FeedViewController.swift in Sources */,
 				1F2AF1F9261D2B3E00B56C33 /* RatingViewController.swift in Sources */,
+				1F2AF20C261DF1EF00B56C33 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,6 +26,7 @@ class OnBoardingScreenViewController: UIPageViewController{
         setViewControllers([getCountryViewController()], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
         self.view.backgroundColor = .gray
+        setupPageControl()
     }
     
 }
@@ -43,7 +44,7 @@ extension OnBoardingScreenViewController: PageViewControllerNavigation{
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let viewController = storyboard.instantiateViewController(withIdentifier: "FeedVC") as! FeedViewController
                     UserDefaults.standard.setValue(true, forKey: "OnBoardingSuccess")
-                    UIApplication.shared.keyWindow?.rootViewController = viewController
+                    UIApplication.shared.windows.first?.rootViewController = viewController
                     self.dismiss(animated: true, completion: nil)
                 }
     }
@@ -72,12 +73,10 @@ extension OnBoardingScreenViewController: UIPageViewControllerDataSource{
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return currentStage
     }
-//    private func setupPageControl() {
-//          let appearance = UIPageControl.appearance()
-//        appearance.pageIndicatorTintColor = UIColor.red.withAlphaComponent(0.6)
-//        appearance.currentPageIndicatorTintColor = .red
-//        appearance.backgroundColor = .yellow
-//      }
+    private func setupPageControl() {
+          let appearance = UIPageControl.appearance()
+        appearance.isUserInteractionEnabled = false
+      }
 }
 
 

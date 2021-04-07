@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="GifCollectionViewCell" reuseIdentifier="GifCollectionViewCell" id="gTV-IL-0wX" customClass="GifCollectionViewCell" customModule="GiphyGo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="365"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="365"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zeT-OV-SW3">
+                        <rect key="frame" x="0.0" y="0.0" width="401" height="274"/>
+                    </imageView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-BD-hyt">
+                        <rect key="frame" x="0.0" y="274" width="401" height="91"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLB-iS-awz">
+                                <rect key="frame" x="355" y="30" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTQ-da-lWV">
+                                <rect key="frame" x="8" y="39" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaY-ix-r2K">
+                                <rect key="frame" x="8" y="8" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zeT-OV-SW3" secondAttribute="trailing" id="Os8-6D-0kU"/>
+                <constraint firstItem="zeT-OV-SW3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RgL-WR-ILj"/>
+                <constraint firstItem="cpp-BD-hyt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jKT-d4-BVj"/>
+                <constraint firstAttribute="trailing" secondItem="cpp-BD-hyt" secondAttribute="trailing" id="kgs-Te-ist"/>
+                <constraint firstItem="cpp-BD-hyt" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.25" id="mPA-8h-b1t"/>
+                <constraint firstItem="zeT-OV-SW3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tI7-gs-3wI"/>
+                <constraint firstItem="cpp-BD-hyt" firstAttribute="top" secondItem="zeT-OV-SW3" secondAttribute="bottom" id="uI8-5T-318"/>
+                <constraint firstAttribute="bottom" secondItem="cpp-BD-hyt" secondAttribute="bottom" id="y0h-k4-nB5"/>
+            </constraints>
+            <size key="customSize" width="401" height="365"/>
+            <connections>
+                <outlet property="authorUsernameLabel" destination="gTQ-da-lWV" id="JWj-IC-gxf"/>
+                <outlet property="gifImageView" destination="zeT-OV-SW3" id="ekM-dO-HQ2"/>
+                <outlet property="gifTitle" destination="CaY-ix-r2K" id="mI3-8Q-kDz"/>
+            </connections>
+            <point key="canvasLocation" x="261.59420289855075" y="209.26339285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
