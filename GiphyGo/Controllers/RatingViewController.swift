@@ -10,9 +10,9 @@ import UIKit
 
 
 enum Ratings: String, CaseIterable{
-    case G
-    case PG
-    case PG13
+    case g
+    case pg
+    case pg13 =  "pg-13"
     case R
 }
 class RatingViewController: UITableViewController{

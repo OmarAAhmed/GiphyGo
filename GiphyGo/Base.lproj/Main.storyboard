@@ -108,23 +108,84 @@
             </objects>
             <point key="canvasLocation" x="2022" y="102"/>
         </scene>
+        <!--User View Controller-->
+        <scene sceneID="BHa-Af-DG9">
+            <objects>
+                <viewController id="qH0-fY-5Mw" customClass="UserViewController" customModule="GiphyGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NKx-bd-FSK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zG3-gL-bTo">
+                                <rect key="frame" x="139.5" y="32" width="135" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPW-Dq-b1Z">
+                                <rect key="frame" x="186.5" y="184" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verified" translatesAutoresizingMaskIntoConstraints="NO" id="U35-Is-XCX">
+                                <rect key="frame" x="232" y="181" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U35-Is-XCX" secondAttribute="height" multiplier="1:1" id="6tV-O4-eck"/>
+                                    <constraint firstAttribute="width" constant="24" id="o5n-FC-Eh8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcn-jQ-mTe">
+                                <rect key="frame" x="8" y="220.5" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kqB-KD-Dkd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zG3-gL-bTo" firstAttribute="top" secondItem="kqB-KD-Dkd" secondAttribute="top" constant="32" id="BfA-F1-ajU"/>
+                            <constraint firstItem="zG3-gL-bTo" firstAttribute="width" secondItem="NKx-bd-FSK" secondAttribute="width" multiplier="0.326087" id="DNp-Og-VGK"/>
+                            <constraint firstItem="hcn-jQ-mTe" firstAttribute="centerX" secondItem="BPW-Dq-b1Z" secondAttribute="centerX" id="Hog-KU-ugf"/>
+                            <constraint firstItem="kqB-KD-Dkd" firstAttribute="trailing" secondItem="hcn-jQ-mTe" secondAttribute="trailing" constant="8" id="L1p-A1-RHv"/>
+                            <constraint firstItem="U35-Is-XCX" firstAttribute="top" secondItem="zG3-gL-bTo" secondAttribute="bottom" constant="21" id="N2L-P4-RQz"/>
+                            <constraint firstItem="hcn-jQ-mTe" firstAttribute="top" secondItem="BPW-Dq-b1Z" secondAttribute="bottom" constant="16" id="SGE-Ut-2Dn"/>
+                            <constraint firstItem="BPW-Dq-b1Z" firstAttribute="top" secondItem="zG3-gL-bTo" secondAttribute="bottom" constant="24" id="XbT-Yj-cZw"/>
+                            <constraint firstItem="U35-Is-XCX" firstAttribute="leading" secondItem="BPW-Dq-b1Z" secondAttribute="trailing" constant="4" id="bKE-da-gC7"/>
+                            <constraint firstItem="zG3-gL-bTo" firstAttribute="centerX" secondItem="kqB-KD-Dkd" secondAttribute="centerX" id="cE2-eb-xeF"/>
+                            <constraint firstItem="hcn-jQ-mTe" firstAttribute="leading" secondItem="kqB-KD-Dkd" secondAttribute="leading" constant="8" id="cS3-Yz-8H3"/>
+                            <constraint firstItem="zG3-gL-bTo" firstAttribute="height" secondItem="NKx-bd-FSK" secondAttribute="height" multiplier="0.151786" id="gf7-aG-zG4"/>
+                            <constraint firstItem="BPW-Dq-b1Z" firstAttribute="centerX" secondItem="zG3-gL-bTo" secondAttribute="centerX" id="xav-WQ-KFa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="zG3-gL-bTo" id="nQv-K5-MZV"/>
+                        <outlet property="descriptionLabel" destination="hcn-jQ-mTe" id="06t-wJ-JDg"/>
+                        <outlet property="usernameLabel" destination="BPW-Dq-b1Z" id="Eqs-UM-WZw"/>
+                        <outlet property="verifiedImageView" destination="U35-Is-XCX" id="Ntt-pG-bxy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eT-hQ-p3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714.49275362318849" y="952.90178571428567"/>
+        </scene>
         <!--Feed View Controller-->
         <scene sceneID="bGl-mE-63H">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fa3-D7-M4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FeedVC" id="EaP-Yg-OTG" customClass="FeedViewController" customModule="GiphyGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6oW-jx-dcA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="SBe-iy-wIu">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for a Gif on Giphy" translatesAutoresizingMaskIntoConstraints="NO" id="SBe-iy-wIu">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qko-qU-0lt">
                                 <rect key="frame" x="0.0" y="100" width="414" height="762"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1ax-NB-Qzs">
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="1ax-NB-Qzs">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -134,7 +195,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cfi-tj-Znx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                         <constraints>
                             <constraint firstItem="cfi-tj-Znx" firstAttribute="trailing" secondItem="Qko-qU-0lt" secondAttribute="trailing" id="F5T-H0-20b"/>
                             <constraint firstItem="Qko-qU-0lt" firstAttribute="leading" secondItem="cfi-tj-Znx" secondAttribute="leading" id="GN6-bH-thE"/>
@@ -147,13 +208,20 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Qko-qU-0lt" id="F1w-eX-dq8"/>
+                        <outlet property="searchBar" destination="SBe-iy-wIu" id="6GZ-di-OEp"/>
+                        <segue destination="qH0-fY-5Mw" kind="presentation" identifier="UserProfileSegue" id="zLs-Sm-lQy"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fa3-D7-M4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="953"/>
+            <point key="canvasLocation" x="1800" y="966"/>
         </scene>
     </scenes>
     <resources>
+        <image name="verified" width="512" height="288"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -33,6 +33,7 @@ class GifModel: Mappable{
         trendingDateTime <- map["trending_datetime"]
         width <- map["images.downsized.width"]
         height <- map["images.downsized.height"]
+        user <- map["user"]
 
     }
     

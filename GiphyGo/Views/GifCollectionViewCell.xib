@@ -11,38 +11,54 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="GifCollectionViewCell" reuseIdentifier="GifCollectionViewCell" id="gTV-IL-0wX" customClass="GifCollectionViewCell" customModule="GiphyGo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="401" height="365"/>
+            <rect key="frame" x="0.0" y="0.0" width="401" height="388"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="401" height="365"/>
+                <rect key="frame" x="0.0" y="0.0" width="401" height="388"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zeT-OV-SW3">
-                        <rect key="frame" x="0.0" y="0.0" width="401" height="274"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zeT-OV-SW3">
+                        <rect key="frame" x="0.0" y="0.0" width="401" height="291"/>
                     </imageView>
                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-BD-hyt">
-                        <rect key="frame" x="0.0" y="274" width="401" height="91"/>
+                        <rect key="frame" x="0.0" y="291" width="401" height="97"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLB-iS-awz">
-                                <rect key="frame" x="355" y="30" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="gTQ-da-lWV">
+                                <rect key="frame" x="8" y="52.5" width="336" height="48.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="CaY-ix-r2K">
+                                <rect key="frame" x="8" y="0.0" width="385" height="48.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLB-iS-awz">
+                                <rect key="frame" x="352" y="52.5" width="41" height="48.5"/>
+                                <state key="normal" image="heart-empty"/>
+                                <connections>
+                                    <action selector="favoriteButtonWasTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vYT-cP-DuB"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTQ-da-lWV">
-                                <rect key="frame" x="8" y="39" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaY-ix-r2K">
-                                <rect key="frame" x="8" y="8" width="33" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MLB-iS-awz" firstAttribute="top" secondItem="CaY-ix-r2K" secondAttribute="bottom" constant="4" id="9Em-Zo-eyQ"/>
+                            <constraint firstItem="MLB-iS-awz" firstAttribute="leading" secondItem="gTQ-da-lWV" secondAttribute="trailing" constant="8" id="IHw-rb-z4z"/>
+                            <constraint firstItem="CaY-ix-r2K" firstAttribute="top" secondItem="cpp-BD-hyt" secondAttribute="top" id="IjQ-WP-gAK"/>
+                            <constraint firstItem="MLB-iS-awz" firstAttribute="width" secondItem="cpp-BD-hyt" secondAttribute="width" multiplier="0.102244" id="QPb-pS-1ZQ"/>
+                            <constraint firstItem="gTQ-da-lWV" firstAttribute="leading" secondItem="cpp-BD-hyt" secondAttribute="leading" constant="8" id="cQg-Og-VMY"/>
+                            <constraint firstAttribute="trailing" secondItem="MLB-iS-awz" secondAttribute="trailing" constant="8" id="hCU-3y-mnb"/>
+                            <constraint firstItem="MLB-iS-awz" firstAttribute="height" secondItem="cpp-BD-hyt" secondAttribute="height" multiplier="0.5" id="mWg-P0-Gf5"/>
+                            <constraint firstItem="MLB-iS-awz" firstAttribute="centerY" secondItem="gTQ-da-lWV" secondAttribute="centerY" id="mcm-cT-HFX"/>
+                            <constraint firstItem="gTQ-da-lWV" firstAttribute="height" secondItem="cpp-BD-hyt" secondAttribute="height" multiplier="0.5" id="p8m-u6-4kr"/>
+                            <constraint firstItem="CaY-ix-r2K" firstAttribute="leading" secondItem="cpp-BD-hyt" secondAttribute="leading" constant="8" id="rLh-qs-sap"/>
+                            <constraint firstItem="MLB-iS-awz" firstAttribute="height" secondItem="gTQ-da-lWV" secondAttribute="height" id="suG-9g-SMA"/>
+                            <constraint firstAttribute="trailing" secondItem="CaY-ix-r2K" secondAttribute="trailing" constant="8" id="tRh-PR-Bv1"/>
+                            <constraint firstItem="CaY-ix-r2K" firstAttribute="height" secondItem="cpp-BD-hyt" secondAttribute="height" multiplier="0.5" id="zlj-ex-ElF"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -58,16 +74,18 @@
                 <constraint firstItem="cpp-BD-hyt" firstAttribute="top" secondItem="zeT-OV-SW3" secondAttribute="bottom" id="uI8-5T-318"/>
                 <constraint firstAttribute="bottom" secondItem="cpp-BD-hyt" secondAttribute="bottom" id="y0h-k4-nB5"/>
             </constraints>
-            <size key="customSize" width="401" height="365"/>
+            <size key="customSize" width="401" height="388"/>
             <connections>
                 <outlet property="authorUsernameLabel" destination="gTQ-da-lWV" id="JWj-IC-gxf"/>
+                <outlet property="favoriteButton" destination="MLB-iS-awz" id="NXq-zT-ab9"/>
                 <outlet property="gifImageView" destination="zeT-OV-SW3" id="ekM-dO-HQ2"/>
-                <outlet property="gifTitle" destination="CaY-ix-r2K" id="mI3-8Q-kDz"/>
+                <outlet property="gifTitleLabel" destination="CaY-ix-r2K" id="4PE-oV-x4S"/>
             </connections>
-            <point key="canvasLocation" x="261.59420289855075" y="209.26339285714286"/>
+            <point key="canvasLocation" x="261.59420289855075" y="216.96428571428569"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="heart-empty" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
