@@ -30,7 +30,6 @@ class NetworkManager{
         }
         AF.request(baseURL+endPoint, method: .get, parameters: parameters).responseJSON{ [weak self](response)
             in
-            print(response.request)
             var totalCount = 0
         
             if let result  = response.value as? Dictionary<String, Any>{

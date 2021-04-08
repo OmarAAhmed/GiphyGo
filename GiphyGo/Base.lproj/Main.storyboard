@@ -120,27 +120,27 @@
                                 <rect key="frame" x="139.5" y="32" width="135" height="128"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPW-Dq-b1Z">
-                                <rect key="frame" x="186.5" y="184" width="41.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="184" y="184" width="46" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verified" translatesAutoresizingMaskIntoConstraints="NO" id="U35-Is-XCX">
-                                <rect key="frame" x="232" y="181" width="24" height="24"/>
+                                <rect key="frame" x="234" y="181" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="U35-Is-XCX" secondAttribute="height" multiplier="1:1" id="6tV-O4-eck"/>
                                     <constraint firstAttribute="width" constant="24" id="o5n-FC-Eh8"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcn-jQ-mTe">
-                                <rect key="frame" x="8" y="220.5" width="398" height="20.5"/>
+                                <rect key="frame" x="8" y="221.5" width="398" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kqB-KD-Dkd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.25226631549873735" green="0.25226631549873735" blue="0.25226631549873735" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="zG3-gL-bTo" firstAttribute="top" secondItem="kqB-KD-Dkd" secondAttribute="top" constant="32" id="BfA-F1-ajU"/>
                             <constraint firstItem="zG3-gL-bTo" firstAttribute="width" secondItem="NKx-bd-FSK" secondAttribute="width" multiplier="0.326087" id="DNp-Og-VGK"/>
@@ -165,9 +165,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eT-hQ-p3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714.49275362318849" y="952.90178571428567"/>
+            <point key="canvasLocation" x="2710" y="1798"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Feed-->
         <scene sceneID="bGl-mE-63H">
             <objects>
                 <viewController storyboardIdentifier="FeedVC" id="EaP-Yg-OTG" customClass="FeedViewController" customModule="GiphyGo" customModuleProvider="target" sceneMemberID="viewController">
@@ -183,7 +183,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qko-qU-0lt">
-                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="1ax-NB-Qzs">
                                     <size key="itemSize" width="128" height="128"/>
@@ -206,6 +206,7 @@
                             <constraint firstItem="SBe-iy-wIu" firstAttribute="top" secondItem="cfi-tj-Znx" secondAttribute="top" id="vGL-aB-4QM"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="list.bullet" catalog="system" id="BEz-Fc-jGQ"/>
                     <connections>
                         <outlet property="collectionView" destination="Qko-qU-0lt" id="F1w-eX-dq8"/>
                         <outlet property="searchBar" destination="SBe-iy-wIu" id="6GZ-di-OEp"/>
@@ -214,16 +215,86 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fa3-D7-M4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="966"/>
+            <point key="canvasLocation" x="2710.144927536232" y="965.625"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="Twm-WW-3o8">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesVC" id="epK-cj-KPH" customClass="FavoritesViewController" customModule="GiphyGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pRz-wU-CLu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n5c-Gz-oPb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="Xkp-dw-2B8">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QdK-JM-Gp0"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstItem="QdK-JM-Gp0" firstAttribute="bottom" secondItem="n5c-Gz-oPb" secondAttribute="bottom" id="EvM-ll-Vll"/>
+                            <constraint firstItem="n5c-Gz-oPb" firstAttribute="top" secondItem="QdK-JM-Gp0" secondAttribute="top" id="Usg-b7-HWg"/>
+                            <constraint firstItem="QdK-JM-Gp0" firstAttribute="trailing" secondItem="n5c-Gz-oPb" secondAttribute="trailing" id="uRI-ne-BYv"/>
+                            <constraint firstItem="n5c-Gz-oPb" firstAttribute="leading" secondItem="QdK-JM-Gp0" secondAttribute="leading" id="yDB-2p-Gr6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart-empty" selectedImage="heart-filled" id="WXC-4N-Blr"/>
+                    <connections>
+                        <outlet property="collectionView" destination="n5c-Gz-oPb" id="JdN-fx-YNb"/>
+                        <segue destination="qH0-fY-5Mw" kind="presentation" identifier="UserProfileFavoritesSegue" id="bL5-Vf-E6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2S0-jt-gbC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4028.985507246377" y="965.625"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="Onw-bn-ISb">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarVC" title="Feed" automaticallyAdjustsScrollViewInsets="NO" id="3oX-r2-Dpp" customClass="TabBarViewController" customModule="GiphyGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rl3-cs-L4b">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="secondaryLabelColor"/>
+                        <color key="barTintColor" systemColor="secondaryLabelColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EaP-Yg-OTG" kind="relationship" relationship="viewControllers" id="HWW-og-C6N"/>
+                        <segue destination="epK-cj-KPH" kind="relationship" relationship="viewControllers" id="54P-Ip-DQu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7RU-XG-xEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="965.625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bL5-Vf-E6z"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="verified" width="512" height="288"/>
+        <image name="heart-empty" width="24" height="24"/>
+        <image name="heart-filled" width="24" height="24"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="verified" width="24" height="24"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

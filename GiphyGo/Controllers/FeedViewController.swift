@@ -7,45 +7,57 @@
 
 import Foundation
 import UIKit
+
 class FeedViewController: UIViewController, UICollectionViewDelegateFlowLayout {
-    
-    @IBOutlet weak var searchBar: UISearchBar!
+   
     // MARK: Outlets
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: Variables
-    var gifs = [GifModel]()
-    var offset = 0
+    var presenter = FeedPresenter()
     var refreshControl:UIRefreshControl!
-    var selectedGif: GifModel!
+    
+    
     // MARK: View Configurations
     override func viewWillAppear(_ animated: Bool) {
     }
     
-    override func viewDidLoad() {
-        
+     func fetchGifs() {
+        presenter.fetchGifs {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    fileprivate func configureCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
-        
-        textFieldInsideSearchBar?.textColor = UIColor.white
-        
         collectionView.register(UINib(nibName: "GifCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GifCollectionViewCell")
-        NetworkManager.shared.fetchGifs(endPoint: Endpoints.trending.rawValue, parameters: ["api_key": NetworkManager.shared.getAPIKey(), "rating": UserDefaults.standard.object(forKey: "ContentRating") as! String]){ [weak self] (pics, count) in
-            self?.gifs = pics
-            self?.collectionView.reloadData()
-        }
-        
+    }
+    
+    fileprivate func configureSearchBar() {
+        searchBar.delegate = self
+        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = UIColor.white
+    }
+    
+    fileprivate func configureRefreshControl() {
         self.refreshControl = UIRefreshControl()
-        //   self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl.addTarget(self, action: #selector(viewDidLoad), for: .valueChanged)
+        self.refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         collectionView!.addSubview(refreshControl)
-        // MARK: Collection View Configurations
+    }
+    func configureUIComponents(){
+        configureCollectionView()
+        configureSearchBar()
+        configureRefreshControl()
+    }
+    override func viewDidLoad() {
+        configureUIComponents()
+        fetchGifs()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? UserViewController{
-            destination.user = selectedGif.user
+            destination.user = presenter.selectedGif.user
         }
     }
 }
@@ -59,37 +71,61 @@ extension FeedViewController: UICollectionViewDelegate{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedGif = gifs[indexPath.row]
-        if selectedGif.user != nil{
+        presenter.selectedGif = presenter.gifs[indexPath.row]
+        if presenter.selectedGif.user != nil{
         performSegue(withIdentifier: "UserProfileSegue", sender: self)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == gifs.count - 1 {
-            NetworkManager.shared.fetchGifs(endPoint: Endpoints.trending.rawValue, parameters: ["api_key": NetworkManager.shared.getAPIKey(), "rating": UserDefaults.standard.object(forKey: "ContentRating") as! String, "offset": "\(offset + 50)"], shouldRefresh: false){ [weak self] (pics, count) in
-                self?.offset += 50
-                self?.gifs.append(contentsOf: pics)
+        if indexPath.row == presenter.gifs.count - 1 {
+            NetworkManager.shared.fetchGifs(endPoint: Endpoints.trending.rawValue, parameters: ["api_key": NetworkManager.shared.getAPIKey(), "rating": UserDefaults.standard.object(forKey: "ContentRating") as! String, "offset": "\(presenter.offset + 50)"], shouldRefresh: false){ [weak self] (pics, count) in
+                self?.presenter.offset += 50
+                self?.presenter.gifs.append(contentsOf: pics)
                 self?.collectionView.reloadData()
                 
             }
         }
     }
     
+    @objc func refresh(){
+        reload()
+        self.refreshControl.endRefreshing()
+    }
     
 }
 
 extension FeedViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gifs.count
+        return presenter.gifs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GifCollectionViewCell",for: indexPath) as! GifCollectionViewCell
-        cell.configure(gifs[indexPath.row] )
+        cell.configure(presenter.gifs[indexPath.row] )
         return cell
     }
     
 }
 
 
+extension FeedViewController: ReloadDataProtocol{
+    func reload() {
+        presenter.gifs.removeAll()
+        fetchGifs()
+        self.collectionView.reloadData()
+    }
+}
+
+
+extension FeedViewController: UISearchBarDelegate{
+
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        NetworkManager.shared.fetchGifs(endPoint: Endpoints.search.rawValue, parameters: ["api_key": NetworkManager.shared.getAPIKey(), "rating": UserDefaults.standard.object(forKey: "ContentRating") as! String, "q": searchBar.text ?? ""]){ [weak self] (pics, count) in
+            self?.presenter.gifs = pics
+            self?.collectionView.reloadData()
+        }
+    }
+}

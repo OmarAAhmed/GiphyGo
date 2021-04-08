@@ -10,10 +10,10 @@ import RealmSwift
 
 class GifRealmModel: Object{
     
-    @objc var id: String = ""
+    @objc dynamic var gifID: String = ""
     
     
     func mapToModel(_ gif: GifModel){
-        self.id = gif.id ?? ""
+        self.gifID = gif.id ?? ""
     }
 }

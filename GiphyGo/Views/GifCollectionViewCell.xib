@@ -20,7 +20,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zeT-OV-SW3">
                         <rect key="frame" x="0.0" y="0.0" width="401" height="291"/>
                     </imageView>
-                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-BD-hyt">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-BD-hyt">
                         <rect key="frame" x="0.0" y="291" width="401" height="97"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="gTQ-da-lWV">
@@ -37,6 +37,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLB-iS-awz">
                                 <rect key="frame" x="352" y="52.5" width="41" height="48.5"/>
+                                <color key="tintColor" red="0.80000000000000004" green="0.0" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="heart-empty"/>
                                 <connections>
                                     <action selector="favoriteButtonWasTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vYT-cP-DuB"/>

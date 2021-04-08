@@ -8,17 +8,17 @@
 import UIKit
 import Kingfisher
 import Foundation
-import Realm
+import RealmSwift
 class GifCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var gifImageView: UIImageView!
     @IBOutlet weak var gifTitleLabel: UILabel!
     @IBOutlet weak var authorUsernameLabel: UILabel!
-    
-    let relativeFontConstant:CGFloat = 0.046
+
     var gif: GifModel!
-    var saved = UserDefaults.standard.stringArray(forKey: "favoritedGifs") ?? [String]()
+    var delegate: ReloadDataProtocol?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,32 +33,44 @@ class GifCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func favoriteButtonWasTapped(_ sender: Any) {
-        if  favoriteButton.image(for: .normal) == #imageLiteral(resourceName: "heart-empty"){
-            favoriteButton.setImage(#imageLiteral(resourceName: "heart-filled") , for: .normal)
-            saved.append(gif.id!)
-            UserDefaults.standard.removeObject(forKey: "favoritedGifs")
-            UserDefaults.standard.setValue(saved, forKey: "favoritedGifs")
+        let realm = try! Realm()
+        let model = GifRealmModel()
+        model.mapToModel(gif)
+        let recipeObject = realm.objects(GifRealmModel.self).filter("gifID == '\(gif.id!)'")
+        if recipeObject.count != 0{
+            do {try? realm.write{
+                realm.delete(recipeObject)
+                }  
+            }
         } else {
-            favoriteButton.setImage(#imageLiteral(resourceName: "heart-empty"), for: .normal)
-            var index = saved.firstIndex(of: gif.id!)
-            saved.remove(at: index!)
-            UserDefaults.standard.removeObject(forKey: "favoritedGifs")
-            UserDefaults.standard.setValue(saved, forKey: "favoritedGifs")
+            do{ try realm.write{
+                realm.add(model)
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
         }
+        favoriteButton.image(for: .normal) == #imageLiteral(resourceName: "heart-empty") ?   favoriteButton.setImage(#imageLiteral(resourceName: "heart-filled") , for: .normal) : favoriteButton.setImage(#imageLiteral(resourceName: "heart-empty"), for: .normal)
+        delegate?.reload()
     }
     
     func configure(_ gif: GifModel){
         self.gif = gif
         if let url = gif.url{
         gifImageView.kf.setImage(with:URL(string: url))
-            print(url)
         }
         gifTitleLabel.text = gif.title
         authorUsernameLabel.text =  gif.user?.username!
-        if (saved.contains(gif.id!)){
-            favoriteButton.setImage(#imageLiteral(resourceName: "heart-filled") , for: .normal)
+        configureButtonState(button: &favoriteButton, recipe: gif)
+    }
+    
+     func configureButtonState(button: inout UIButton, recipe: GifModel){
+        let realm = try? Realm()
+        let favoriteGifs = realm?.objects(GifRealmModel.self)
+        if ((favoriteGifs?.filter("gifID == '\(gif.id!)'").count)!) > 0 {
+            button.setImage(#imageLiteral(resourceName: "heart-filled") , for: .normal)
         } else {
-            favoriteButton.setImage(#imageLiteral(resourceName: "heart-empty"), for: .normal)
+            button.setImage(#imageLiteral(resourceName: "heart-empty"), for: .normal)
         }
     }
 }

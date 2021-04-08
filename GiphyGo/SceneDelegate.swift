@@ -16,9 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         var initialViewController: UIViewController
         let userDefaults = UserDefaults.standard
-        if let login = userDefaults.object(forKey: "OnBoardingSuccess") as? Bool{
+        if (userDefaults.object(forKey: "OnBoardingSuccess") as? Bool) != nil{
             
-            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "FeedVC") as! FeedViewController
+            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarViewController
          }
          else
          {

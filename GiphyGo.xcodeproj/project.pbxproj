@@ -25,6 +25,9 @@
 		1F2AF210261DF89B00B56C33 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2AF20F261DF89B00B56C33 /* FeedViewController.swift */; };
 		1F92450E261E8D1700A19D21 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92450D261E8D1700A19D21 /* UserViewController.swift */; };
 		1F924511261EA18C00A19D21 /* GifRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F924510261EA18C00A19D21 /* GifRealmModel.swift */; };
+		1F924515261F512600A19D21 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F924514261F512600A19D21 /* FavoritesViewController.swift */; };
+		1FF78ACA261F5BA0000B65AA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF78AC9261F5BA0000B65AA /* TabBarViewController.swift */; };
+		1FF78ACE261F830D000B65AA /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF78ACD261F830D000B65AA /* FeedPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		1F2AF20F261DF89B00B56C33 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		1F92450D261E8D1700A19D21 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		1F924510261EA18C00A19D21 /* GifRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifRealmModel.swift; sourceTree = "<group>"; };
+		1F924514261F512600A19D21 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		1FF78AC9261F5BA0000B65AA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1FF78ACD261F830D000B65AA /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		2ABA634B651E3F4D68FB8E24 /* Pods-GiphyGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyGo.debug.xcconfig"; path = "Target Support Files/Pods-GiphyGo/Pods-GiphyGo.debug.xcconfig"; sourceTree = "<group>"; };
 		44E3FD91098F7B92E76E1A13 /* Pods-GiphyGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyGo.release.xcconfig"; path = "Target Support Files/Pods-GiphyGo/Pods-GiphyGo.release.xcconfig"; sourceTree = "<group>"; };
 		F6740D92482929CB34DC825F /* Pods_GiphyGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiphyGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +99,7 @@
 				1F2AF1D0261D1E4100B56C33 /* Info.plist */,
 				1F2AF207261DF02300B56C33 /* Models */,
 				1F2AF206261DEFEA00B56C33 /* Helper Classes */,
+				1FF78ACC261F82E2000B65AA /* Presenters */,
 				1F2AF205261DEFD600B56C33 /* Controllers */,
 				1F2AF203261DEFC700B56C33 /* Views */,
 			);
@@ -116,6 +123,8 @@
 				1F2AF1F8261D2B3E00B56C33 /* RatingViewController.swift */,
 				1F2AF20F261DF89B00B56C33 /* FeedViewController.swift */,
 				1F92450D261E8D1700A19D21 /* UserViewController.swift */,
+				1F924514261F512600A19D21 /* FavoritesViewController.swift */,
+				1FF78AC9261F5BA0000B65AA /* TabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -137,6 +146,14 @@
 				1F924510261EA18C00A19D21 /* GifRealmModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1FF78ACC261F82E2000B65AA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				1FF78ACD261F830D000B65AA /* FeedPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		7D357C19A91B909A3EB6CFF8 /* Pods */ = {
@@ -273,6 +290,7 @@
 			files = (
 				1F2AF1E7261D24BF00B56C33 /* NetworkManager.swift in Sources */,
 				1F92450E261E8D1700A19D21 /* UserViewController.swift in Sources */,
+				1F924515261F512600A19D21 /* FavoritesViewController.swift in Sources */,
 				1F2AF1C7261D1E3F00B56C33 /* OnBoardingScreenViewController.swift in Sources */,
 				1F2AF200261DEE2400B56C33 /* GifCollectionViewCell.swift in Sources */,
 				1F2AF1C3261D1E3F00B56C33 /* AppDelegate.swift in Sources */,
@@ -280,9 +298,11 @@
 				1F2AF1F6261D288300B56C33 /* CountryViewController.swift in Sources */,
 				1F2AF1EA261D265A00B56C33 /* CountryManager.swift in Sources */,
 				1F2AF210261DF89B00B56C33 /* FeedViewController.swift in Sources */,
+				1FF78ACE261F830D000B65AA /* FeedPresenter.swift in Sources */,
 				1F2AF1C5261D1E3F00B56C33 /* SceneDelegate.swift in Sources */,
 				1F2AF1F9261D2B3E00B56C33 /* RatingViewController.swift in Sources */,
 				1F2AF20C261DF1EF00B56C33 /* UserModel.swift in Sources */,
+				1FF78ACA261F5BA0000B65AA /* TabBarViewController.swift in Sources */,
 				1F924511261EA18C00A19D21 /* GifRealmModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,7 +42,7 @@ extension OnBoardingScreenViewController: PageViewControllerNavigation{
                     setViewControllers([getRatingViewController()], direction: .forward, animated: true, completion: nil)
                 } else {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let viewController = storyboard.instantiateViewController(withIdentifier: "FeedVC") as! FeedViewController
+                    let viewController = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarViewController
                     UserDefaults.standard.setValue(true, forKey: "OnBoardingSuccess")
                     UIApplication.shared.windows.first?.rootViewController = viewController
                     self.dismiss(animated: true, completion: nil)

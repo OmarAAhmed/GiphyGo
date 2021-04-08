@@ -15,7 +15,7 @@ class UserModel: Mappable{
     var username: String?
     var description: String?
     var instagramUrl: String?
-    var isVerified: String?
+    var isVerified: Bool?
   
     
     

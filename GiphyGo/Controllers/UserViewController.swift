@@ -26,6 +26,9 @@ class UserViewController: UIViewController{
         avatarImageView.layer.borderColor = UIColor.black.cgColor
         avatarImageView.layer.cornerRadius = avatarImageView.frame.height/2
         avatarImageView.clipsToBounds = true
+        if user.isVerified!{
+            verifiedImageView.isHidden = false
+        }
     }
     
 }
