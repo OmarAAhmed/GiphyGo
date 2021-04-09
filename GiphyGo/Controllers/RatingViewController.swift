@@ -17,26 +17,41 @@ enum Ratings: String, CaseIterable{
 }
 class RatingViewController: UITableViewController{
     
+    @IBOutlet weak var instructionLabel: UILabel!
     var delegate : PageViewControllerNavigation!
     
     override func viewDidLoad() {
-        
+        configureFontSize(label: instructionLabel)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ratingCell")!
         cell.textLabel?.text = Ratings.allCases[indexPath.row].rawValue
+        configureFontSize(label: cell.textLabel!)
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UserDefaults.standard.setValue(Ratings.allCases[indexPath.row].rawValue, forKey: "ContentRating")
         delegate.next(viewController: self)
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
+    
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
+    }
+    
+    func configureFontSize(label: UILabel) {
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            if label == instructionLabel{
+            label.font = label.font.withSize(24)
+            } else {
+                label.font = label.font.withSize(20)
+            }
+        }
     }
 }
 

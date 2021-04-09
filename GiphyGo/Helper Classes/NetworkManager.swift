@@ -28,6 +28,7 @@ class NetworkManager{
         AF.request(baseURL+endPoint, method: .get, parameters: parameters).responseJSON{ [weak self](response)
             in
             var totalCount = 0
+            print(response.request)
             var gifsArray = [GifModel]()
             if let result  = response.value as? Dictionary<String, Any>{
                 if let returnedTotalCount = result["totalResults"] as? Int{

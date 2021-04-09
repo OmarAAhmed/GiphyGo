@@ -62,8 +62,8 @@
             filePath = "GiphyGo/Controllers/FeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "collectionView(_:willDisplay:forItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,13 +78,13 @@
             filePath = "GiphyGo/Controllers/FeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "collectionView(_:willDisplay:forItemAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F3224DD9-FC12-48FC-985A-C2C9BE6AA4F1 - 739bb5ceb36130b4"
+                  uuid = "F3224DD9-FC12-48FC-985A-C2C9BE6AA4F1 - 739bb5ceb36130d7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -94,12 +94,12 @@
                   urlString = "file:///Users/omarabdelaziz/Desktop/Personal%20Projects/GiphyGo/GiphyGo/Controllers/FeedViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
                   offsetFromSymbolStart = "367">
                </Location>
                <Location
-                  uuid = "F3224DD9-FC12-48FC-985A-C2C9BE6AA4F1 - 9757d5cb83c0cfaa"
+                  uuid = "F3224DD9-FC12-48FC-985A-C2C9BE6AA4F1 - 9757d5cb83c0cf8b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -109,8 +109,8 @@
                   urlString = "file:///Users/omarabdelaziz/Desktop/Personal%20Projects/GiphyGo/GiphyGo/Controllers/FeedViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
                   offsetFromSymbolStart = "52">
                </Location>
             </Locations>
@@ -119,32 +119,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "917632B4-8341-4F98-BC67-63AA5C7A310B"
+            uuid = "457B3407-EC58-4B94-8266-67DD4DF6F81D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GiphyGo/Helper Classes/NetworkManager.swift"
+            filePath = "GiphyGo/Controllers/CountryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "fetchGifs(endPoint:parameters:shouldRefresh:completion:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "configureFontSize(label:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6601C144-603F-45EC-AC89-C31E5C0CFF78"
+            uuid = "22C49788-FBEC-4498-A9DC-78E9768CEF88"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GiphyGo/Helper Classes/NetworkManager.swift"
+            filePath = "GiphyGo/Controllers/CountryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "fetchGifs(endPoint:parameters:shouldRefresh:completion:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "configureFontSize(label:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "727920CF-0719-473C-8B0E-C7C45FBD14B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GiphyGo/Presenters/FeedPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "searchForGifs(keyword:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E358568-81D7-4CD0-8F5D-4DE1B6F62B2D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GiphyGo/Controllers/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97741DBF-3BA7-4164-9CBA-15618BD93858"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GiphyGo/Models/GifModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "&lt;(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

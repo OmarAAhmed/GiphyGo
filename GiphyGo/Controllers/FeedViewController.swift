@@ -65,9 +65,10 @@ class FeedViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     // MARK: Selectors
     @objc func refresh(){
         presenter.offset = 0
+        if searchBar.text == ""{
         presenter.searchIsActive = false
+        }
         presenter.gifs.removeAll()
-        searchBar.text?.removeAll()
         reload()
         self.refreshControl.endRefreshing()
     }
@@ -114,7 +115,9 @@ extension FeedViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GifCollectionViewCell",for: indexPath) as! GifCollectionViewCell
+        if presenter.gifs.count > 0{
         cell.configure(presenter.gifs[indexPath.row] )
+        }
         return cell
     }
 }
@@ -127,13 +130,23 @@ extension FeedViewController: UISearchBarDelegate{
             self.collectionView.reloadData()
         }
     }
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if ((searchBar.text?.isEmpty) == true){
+            presenter.searchIsActive = false
+        }
+    }
 }
 
 // MARK: Protocol Conformation
 extension FeedViewController: ReloadDataProtocol{
     func reload() {
-        fetchGifs()
-        self.collectionView.reloadData()
+        if searchBar.text == ""{
+            fetchGifs()
+        }else {
+            presenter.searchForGifs(keyword: searchBar.text ?? ""){
+                self.collectionView.reloadData()}
+        
+        }
     }
 }
 

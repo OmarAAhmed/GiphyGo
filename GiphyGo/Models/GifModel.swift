@@ -8,7 +8,15 @@
 import Foundation
 import ObjectMapper
 
-class GifModel: Mappable{
+class GifModel: Mappable, Comparable{
+    static func < (lhs: GifModel, rhs: GifModel) -> Bool {
+        return self.converToDate(date: lhs.importDateTime!) < self.converToDate(date: rhs.importDateTime!)
+    }
+    
+    static func == (lhs: GifModel, rhs: GifModel) -> Bool {
+        return self.converToDate(date: lhs.importDateTime!) == self.converToDate(date: rhs.importDateTime!)
+    }
+    
 
     
     
@@ -17,7 +25,7 @@ class GifModel: Mappable{
     var rating: String?
     var title: String?
     var importDateTime: String?
-    var trendingDateTime: Date?
+    var trendingDateTime: String?
     var user: UserModel?
     var width: String?
     var height: String?
@@ -39,6 +47,15 @@ class GifModel: Mappable{
     
     required init?(map: Map) {
         
+    }
+    
+   class func converToDate(date: String)->Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let convertedDate = dateFormatter.date(from:date)!
+        print(convertedDate)
+        return convertedDate
     }
     
 }

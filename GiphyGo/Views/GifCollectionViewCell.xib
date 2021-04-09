@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MLB-iS-awz" firstAttribute="top" secondItem="CaY-ix-r2K" secondAttribute="bottom" constant="4" id="9Em-Zo-eyQ"/>
                             <constraint firstItem="MLB-iS-awz" firstAttribute="leading" secondItem="gTQ-da-lWV" secondAttribute="trailing" constant="8" id="IHw-rb-z4z"/>
@@ -87,8 +87,8 @@
     </objects>
     <resources>
         <image name="heart-empty" width="24" height="24"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
