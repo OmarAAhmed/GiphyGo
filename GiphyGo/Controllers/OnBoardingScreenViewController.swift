@@ -9,15 +9,17 @@ import UIKit
 
 class OnBoardingScreenViewController: UIPageViewController{
     
+    //MARK: Variables
     var currentStage = 0
     var presenter = OnBoardingScreenPresenter()
     
+    //MARK: Configurations
      func configurePageView() {
         setViewControllers([presenter.getCurrentStaggeViewController(stage: currentStage, sender: self)], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
         self.view.backgroundColor = .gray
     }
-    
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePageView()
@@ -25,11 +27,10 @@ class OnBoardingScreenViewController: UIPageViewController{
     }
 }
 
-protocol PageViewControllerNavigation {
-    func next(viewController: UIViewController)
-}
 
-extension OnBoardingScreenViewController: PageViewControllerNavigation{
+
+
+extension OnBoardingScreenViewController: PageViewControllerNavigationProtocol{
     func next(viewController: UIViewController) {
         if viewController.isKind(of: CountryViewController.self) {
             currentStage += 1

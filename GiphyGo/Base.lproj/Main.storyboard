@@ -250,6 +250,10 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qko-qU-0lt">
                                 <rect key="frame" x="0.0" y="100" width="414" height="713"/>
@@ -269,7 +273,7 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks like there are no results for your query, maybe try different words?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5E-yd-cNK">
                                             <rect key="frame" x="16" y="437.5" width="382" height="41"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -333,13 +337,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="0sC-wB-QS8">
-                                            <rect key="frame" x="87" y="320.5" width="240" height="128"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0sC-wB-QS8">
+                                            <rect key="frame" x="87" y="322" width="240" height="125.5"/>
                                             <color key="tintColor" red="0.80000000000000004" green="0.0" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Gifs here..yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwV-ik-MtM">
                                             <rect key="frame" x="16" y="456.5" width="382" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -399,10 +403,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zLs-Sm-lQy"/>
+        <segue reference="bL5-Vf-E6z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="baseline_language_black_24pt_1x" width="24" height="24"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart-empty" width="24" height="24"/>
         <image name="heart-filled" width="24" height="24"/>
         <image name="instagram" width="466" height="460"/>

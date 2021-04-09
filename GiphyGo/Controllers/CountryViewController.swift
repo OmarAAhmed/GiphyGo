@@ -11,7 +11,7 @@ import UIKit
 class CountryViewController: UITableViewController{
     
     var manager = CountriesManager()
-    var delegate : PageViewControllerNavigation!
+    var delegate : PageViewControllerNavigationProtocol!
     @IBOutlet weak var instructionLabel: UILabel!
     
     override func viewDidLoad() {

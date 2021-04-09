@@ -16,6 +16,7 @@ class OnBoardingScreenPresenter{
         UIApplication.shared.windows.first?.rootViewController = viewController
         completion()
     }
+    
     func getCurrentStaggeViewController(stage: Int, sender: OnBoardingScreenViewController) -> UITableViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         switch stage{

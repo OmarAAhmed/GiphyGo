@@ -117,12 +117,7 @@ extension FavoritesViewController: ReloadDataProtocol{
         fetchGifs()
         self.refreshControl.endRefreshing()
         self.collectionView.reloadData()
-   
 
-        
     }
 }
 
-protocol ReloadDataProtocol {
-    func reload()
-}

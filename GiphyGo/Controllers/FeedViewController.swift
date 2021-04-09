@@ -29,6 +29,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     
     override func viewDidLoad() {
         configureUIComponents()
+        configureSearchBar()
     }
     
     // MARK:  Views Configurations
@@ -48,7 +49,9 @@ class FeedViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     func configureSearchBar() {
         searchBar.delegate = self
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
-        textFieldInsideSearchBar?.textColor = UIColor.white
+            textFieldInsideSearchBar?.textColor = UIColor.systemGray
+        
+        
     }
     
     func configureRefreshControl() {
@@ -149,6 +152,9 @@ extension FeedViewController: UISearchBarDelegate{
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         if ((searchBar.text?.isEmpty) == true){
             presenter.searchIsActive = false
+            presenter.fetchGifs(offset: 0){
+                self.collectionView.reloadData()
+            }
         }
     }
 }

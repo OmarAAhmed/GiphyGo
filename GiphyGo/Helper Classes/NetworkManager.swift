@@ -15,20 +15,16 @@ class NetworkManager{
     private var apiKey = "ElLZJsFs0jgjsdAY4UXQW9TM1M9IXDJ0"
     
     public static let shared: NetworkManager =  NetworkManager()
-    
-    
 
-    
     func getAPIKey()-> String{
     return self.apiKey
     }
     
     func fetchGifs(endPoint: String, parameters: [String:String], shouldRefresh: Bool = true ,completion: @escaping ([GifModel], Int)->()){
         
-        AF.request(baseURL+endPoint, method: .get, parameters: parameters).responseJSON{ [weak self](response)
+        AF.request(baseURL+endPoint, method: .get, parameters: parameters).responseJSON{ (response)
             in
             var totalCount = 0
-            print(response.request)
             var gifsArray = [GifModel]()
             if let result  = response.value as? Dictionary<String, Any>{
                 if let returnedTotalCount = result["totalResults"] as? Int{

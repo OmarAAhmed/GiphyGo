@@ -18,7 +18,7 @@ enum Ratings: String, CaseIterable{
 class RatingViewController: UITableViewController{
     
     @IBOutlet weak var instructionLabel: UILabel!
-    var delegate : PageViewControllerNavigation!
+    var delegate : PageViewControllerNavigationProtocol!
     
     override func viewDidLoad() {
         configureFontSize(label: instructionLabel)

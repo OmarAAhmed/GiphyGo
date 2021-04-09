@@ -8,18 +8,9 @@
 import Foundation
 import ObjectMapper
 
-class GifModel: Mappable, Comparable{
-    static func < (lhs: GifModel, rhs: GifModel) -> Bool {
-        return self.converToDate(date: lhs.importDateTime!) < self.converToDate(date: rhs.importDateTime!)
-    }
-    
-    static func == (lhs: GifModel, rhs: GifModel) -> Bool {
-        return self.converToDate(date: lhs.importDateTime!) == self.converToDate(date: rhs.importDateTime!)
-    }
-    
+class GifModel: Mappable{
 
-    
-    
+
     var id: String?
     var url: String?
     var rating: String?
@@ -29,9 +20,7 @@ class GifModel: Mappable, Comparable{
     var user: UserModel?
     var width: String?
     var height: String?
-    
 
-    
     func mapping(map: Map) {
         id <- map["id"]
         url <- map["images.downsized.url"]
@@ -58,4 +47,14 @@ class GifModel: Mappable, Comparable{
         return convertedDate
     }
     
+}
+
+extension GifModel: Comparable{
+    static func < (lhs: GifModel, rhs: GifModel) -> Bool {
+        return self.converToDate(date: lhs.importDateTime!) < self.converToDate(date: rhs.importDateTime!)
+    }
+    
+    static func == (lhs: GifModel, rhs: GifModel) -> Bool {
+        return self.converToDate(date: lhs.importDateTime!) == self.converToDate(date: rhs.importDateTime!)
+    }
 }
