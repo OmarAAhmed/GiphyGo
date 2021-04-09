@@ -16,7 +16,7 @@ class NetworkManager{
     
     public static let shared: NetworkManager =  NetworkManager()
     
-    var gifsArray = [GifModel]()
+    
 
     
     func getAPIKey()-> String{
@@ -24,28 +24,26 @@ class NetworkManager{
     }
     
     func fetchGifs(endPoint: String, parameters: [String:String], shouldRefresh: Bool = true ,completion: @escaping ([GifModel], Int)->()){
- 
-        if shouldRefresh{
-            self.gifsArray.removeAll()
-        }
+        
         AF.request(baseURL+endPoint, method: .get, parameters: parameters).responseJSON{ [weak self](response)
             in
             var totalCount = 0
-        
+            var gifsArray = [GifModel]()
             if let result  = response.value as? Dictionary<String, Any>{
                 if let returnedTotalCount = result["totalResults"] as? Int{
                 totalCount = returnedTotalCount
                 }
                 if let gifs = result["data"] as? [Dictionary<String,Any>] {
+                    
                     if !gifs.isEmpty{
                         for gif in gifs {
                             let modeledgifs = Mapper<GifModel>().map(JSONObject: gif)
-                            self?.gifsArray.append(modeledgifs!)
+                            gifsArray.append(modeledgifs!)
                         }
                     }
                 }
             }
-            completion(self!.gifsArray, totalCount)
+            completion(gifsArray, totalCount)
         }
     }
 }

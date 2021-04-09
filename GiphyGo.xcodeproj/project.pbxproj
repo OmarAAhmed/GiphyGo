@@ -28,6 +28,9 @@
 		1F924515261F512600A19D21 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F924514261F512600A19D21 /* FavoritesViewController.swift */; };
 		1FF78ACA261F5BA0000B65AA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF78AC9261F5BA0000B65AA /* TabBarViewController.swift */; };
 		1FF78ACE261F830D000B65AA /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF78ACD261F830D000B65AA /* FeedPresenter.swift */; };
+		1FF78AD2261FC1A9000B65AA /* OnBoardingScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF78AD1261FC1A9000B65AA /* OnBoardingScreenPresenter.swift */; };
+		1FF78ADD261FCB47000B65AA /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF78ADC261FCB47000B65AA /* FavoritesPresenter.swift */; };
+		1FF78AE7261FD21B000B65AA /* GifCollectionViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF78AE6261FD21B000B65AA /* GifCollectionViewCellPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		1F924514261F512600A19D21 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		1FF78AC9261F5BA0000B65AA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1FF78ACD261F830D000B65AA /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		1FF78AD1261FC1A9000B65AA /* OnBoardingScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenPresenter.swift; sourceTree = "<group>"; };
+		1FF78ADC261FCB47000B65AA /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		1FF78AE6261FD21B000B65AA /* GifCollectionViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionViewCellPresenter.swift; sourceTree = "<group>"; };
 		2ABA634B651E3F4D68FB8E24 /* Pods-GiphyGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyGo.debug.xcconfig"; path = "Target Support Files/Pods-GiphyGo/Pods-GiphyGo.debug.xcconfig"; sourceTree = "<group>"; };
 		44E3FD91098F7B92E76E1A13 /* Pods-GiphyGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyGo.release.xcconfig"; path = "Target Support Files/Pods-GiphyGo/Pods-GiphyGo.release.xcconfig"; sourceTree = "<group>"; };
 		F6740D92482929CB34DC825F /* Pods_GiphyGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiphyGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +157,10 @@
 		1FF78ACC261F82E2000B65AA /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				1FF78AD1261FC1A9000B65AA /* OnBoardingScreenPresenter.swift */,
 				1FF78ACD261F830D000B65AA /* FeedPresenter.swift */,
+				1FF78ADC261FCB47000B65AA /* FavoritesPresenter.swift */,
+				1FF78AE6261FD21B000B65AA /* GifCollectionViewCellPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -302,7 +311,10 @@
 				1F2AF1C5261D1E3F00B56C33 /* SceneDelegate.swift in Sources */,
 				1F2AF1F9261D2B3E00B56C33 /* RatingViewController.swift in Sources */,
 				1F2AF20C261DF1EF00B56C33 /* UserModel.swift in Sources */,
+				1FF78ADD261FCB47000B65AA /* FavoritesPresenter.swift in Sources */,
+				1FF78AD2261FC1A9000B65AA /* OnBoardingScreenPresenter.swift in Sources */,
 				1FF78ACA261F5BA0000B65AA /* TabBarViewController.swift in Sources */,
+				1FF78AE7261FD21B000B65AA /* GifCollectionViewCellPresenter.swift in Sources */,
 				1F924511261EA18C00A19D21 /* GifRealmModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

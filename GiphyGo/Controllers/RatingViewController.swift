@@ -16,7 +16,9 @@ enum Ratings: String, CaseIterable{
     case R
 }
 class RatingViewController: UITableViewController{
+    
     var delegate : PageViewControllerNavigation!
+    
     override func viewDidLoad() {
         
     }

@@ -55,95 +55,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "65B96852-5432-4F27-B32D-F49AF17D505C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GiphyGo/Views/GifCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "favoriteButtonWasTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C70FD27C-E93A-409E-8519-F117CEAB934A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GiphyGo/Views/GifCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "favoriteButtonWasTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3A23E35F-0665-4E11-A8BA-B491D60BC1B2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GiphyGo/Views/GifCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "favoriteButtonWasTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A1548AFB-6D4E-455C-8743-A24028DE26E7"
+            uuid = "9DA37336-A1F4-455B-85E9-7E6FF0B20C6F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GiphyGo/Controllers/FeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "searchBarSearchButtonClicked(_:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "collectionView(_:willDisplay:forItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3224DD9-FC12-48FC-985A-C2C9BE6AA4F1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GiphyGo/Controllers/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "collectionView(_:willDisplay:forItemAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A1548AFB-6D4E-455C-8743-A24028DE26E7 - 94dd595ade3f9698"
+                  uuid = "F3224DD9-FC12-48FC-985A-C2C9BE6AA4F1 - 739bb5ceb36130b4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "GiphyGo.FeedViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
+                  symbolName = "GiphyGo.FeedViewController.collectionView(_: __C.UICollectionView, willDisplay: __C.UICollectionViewCell, forItemAt: Foundation.IndexPath) -&gt; ()"
                   moduleName = "GiphyGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarabdelaziz/Desktop/Personal%20Projects/GiphyGo/GiphyGo/Controllers/FeedViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "132">
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "367">
                </Location>
                <Location
-                  uuid = "A1548AFB-6D4E-455C-8743-A24028DE26E7 - 5947a00a00de90c7"
+                  uuid = "F3224DD9-FC12-48FC-985A-C2C9BE6AA4F1 - 9757d5cb83c0cfaa"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;GiphyGo.GifModel&gt;, Swift.Int) -&gt; () in GiphyGo.FeedViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
+                  symbolName = "closure #1 () -&gt; () in GiphyGo.FeedViewController.collectionView(_: __C.UICollectionView, willDisplay: __C.UICollectionViewCell, forItemAt: Foundation.IndexPath) -&gt; ()"
                   moduleName = "GiphyGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarabdelaziz/Desktop/Personal%20Projects/GiphyGo/GiphyGo/Controllers/FeedViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "141">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -151,32 +119,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1372FA6F-3BC7-4418-BA42-29C3772970D2"
+            uuid = "917632B4-8341-4F98-BC67-63AA5C7A310B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GiphyGo/Controllers/FeedViewController.swift"
+            filePath = "GiphyGo/Helper Classes/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "searchBarSearchButtonClicked(_:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchGifs(endPoint:parameters:shouldRefresh:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B289DEAD-172E-4FC7-8D81-3145E0E24E7E"
+            uuid = "6601C144-603F-45EC-AC89-C31E5C0CFF78"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GiphyGo/Controllers/FeedViewController.swift"
+            filePath = "GiphyGo/Helper Classes/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "searchBarSearchButtonClicked(_:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "fetchGifs(endPoint:parameters:shouldRefresh:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

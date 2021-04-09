@@ -25,7 +25,17 @@ class CountryViewController: UITableViewController{
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UserDefaults.standard.setValue(manager.countryCodes[indexPath.row], forKey: "Country")
+        var country = manager.countryCodes[indexPath.row]
+        switch country{
+        case "us":
+            country = "en"
+        case "jp":
+            country = "ja"
+        default:
+            break
+        }
+        UserDefaults.standard.setValue(country, forKey: "Country")
+      
         delegate.next(viewController: self)
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
