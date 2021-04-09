@@ -1,0 +1,36 @@
+
+/* Class = "UITabBarController"; title = "Feed"; ObjectID = "3oX-r2-Dpp"; */
+"3oX-r2-Dpp.title" = "الرئيسية";
+
+/* Class = "UITabBarItem"; title = "Feed"; ObjectID = "BEz-Fc-jGQ"; */
+"BEz-Fc-jGQ.title" = "الرئيسية";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BPW-Dq-b1Z"; */
+"BPW-Dq-b1Z.text" = "Label";
+
+/* Class = "UILabel"; text = "Looks like there are no results for your query, maybe try different words?"; ObjectID = "J5E-yd-cNK"; */
+"J5E-yd-cNK.text" = "يبدو أنه لا توجد نتائج لبحثك. هل يمكنك تجربة كلمات أخرى؟";
+
+/* Class = "UISearchBar"; placeholder = "Search for a Gif on Giphy"; ObjectID = "SBe-iy-wIu"; */
+"SBe-iy-wIu.placeholder" = "ابحث عن صورة على Giphy";
+
+/* Class = "UISearchBar"; SBe-iy-wIu.scopeButtonTitles[0] = "Title"; ObjectID = "SBe-iy-wIu"; */
+"SBe-iy-wIu.scopeButtonTitles[0]" = "العنوان";
+
+/* Class = "UISearchBar"; SBe-iy-wIu.scopeButtonTitles[1] = "Title"; ObjectID = "SBe-iy-wIu"; */
+"SBe-iy-wIu.scopeButtonTitles[1]" = "العنوان";
+
+/* Class = "UILabel"; text = "Please Select Content Rating"; ObjectID = "Sey-GQ-jRY"; */
+"Sey-GQ-jRY.text" = "فضلاً قم بإختيار التقييم العمري للمحتوى";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "WXC-4N-Blr"; */
+"WXC-4N-Blr.title" = "المفضلة";
+
+/* Class = "UILabel"; text = "No Gifs here..yet!"; ObjectID = "WwV-ik-MtM"; */
+"WwV-ik-MtM.text" = "لا يوجد صور هنا...بعد!";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hcn-jQ-mTe"; */
+"hcn-jQ-mTe.text" = "Label";
+
+/* Class = "UILabel"; text = "Please Select Your Country's flag"; ObjectID = "wrt-6V-HPC"; */
+"wrt-6V-HPC.text" = "فضلاً قم بإختيار علم بلدك";
