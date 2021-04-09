@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,11 +24,10 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Mmd-fZ-4CF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="4KX-4e-Qd6"/>
                             <constraint firstItem="Mmd-fZ-4CF" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.142857" id="Bpw-ES-RJH"/>
-                            <constraint firstItem="Mmd-fZ-4CF" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.922705" id="GPx-dm-2wO"/>
                             <constraint firstItem="Mmd-fZ-4CF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NtQ-Ks-g3S"/>
                             <constraint firstItem="C7d-ze-6bi" firstAttribute="height" secondItem="Mmd-fZ-4CF" secondAttribute="height" multiplier="0.34375" id="Wyz-TZ-LIR"/>
                             <constraint firstItem="C7d-ze-6bi" firstAttribute="trailing" secondItem="Mmd-fZ-4CF" secondAttribute="trailing" id="grR-Es-aJe"/>
@@ -47,8 +46,8 @@
     <resources>
         <image name="Giphy-logo" width="2500" height="534"/>
         <image name="go" width="1280" height="643"/>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
