@@ -15,6 +15,7 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegateFlowLay
  
     @IBOutlet weak var collectionView: UICollectionView!
 
+    @IBOutlet weak var noDataView: UIView!
     
     // MARK: Variables
   
@@ -22,8 +23,17 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegateFlowLay
     var presenter = FavoritesPresenter()
 
     // MARK: View Configurations
+     func showOrHideNoDataView() {
+        if presenter.gifs.count > 0 {
+            noDataView.isHidden = true
+        } else {
+            noDataView.isHidden = false
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         reload()
+
     }
     
      func fetchGifs() {
@@ -88,6 +98,7 @@ extension FavoritesViewController: UICollectionViewDelegate{
 
 extension FavoritesViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        showOrHideNoDataView()
         return presenter.gifs.count
     }
     
@@ -106,6 +117,9 @@ extension FavoritesViewController: ReloadDataProtocol{
         fetchGifs()
         self.refreshControl.endRefreshing()
         self.collectionView.reloadData()
+   
+
+        
     }
 }
 

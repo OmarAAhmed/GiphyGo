@@ -16,6 +16,7 @@ class UserModel: Mappable{
     var description: String?
     var instagramUrl: String?
     var isVerified: Bool?
+    var websiteUrl: String?
   
     
     
@@ -26,6 +27,7 @@ class UserModel: Mappable{
         description <- map["description"]
         instagramUrl <- map["instagram_url"]
         isVerified <- map["is_verified"]
+        websiteUrl <- map["website_url"]
     }
     
     required init?(map: Map) {

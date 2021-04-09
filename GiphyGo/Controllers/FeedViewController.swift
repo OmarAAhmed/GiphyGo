@@ -13,7 +13,9 @@ class FeedViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     // MARK: Outlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var noResultsView: UIView!
     
+   
     // MARK: Variables
     var presenter = FeedPresenter()
     var refreshControl: UIRefreshControl!
@@ -73,6 +75,13 @@ class FeedViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         self.refreshControl.endRefreshing()
     }
     
+    func showOrHideNoDataView() {
+        if presenter.gifs.count == 0 && presenter.searchIsActive == true {
+        noResultsView.isHidden = false
+       } else {
+        noResultsView.isHidden = true
+       }
+   }
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? UserViewController{
@@ -110,6 +119,7 @@ extension FeedViewController: UICollectionViewDelegate{
 // MARK: Collection View Data Source Configuration
 extension FeedViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        showOrHideNoDataView()
         return presenter.gifs.count
     }
     
@@ -126,6 +136,12 @@ extension FeedViewController: UICollectionViewDataSource{
 extension FeedViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        if ((searchBar.text?.isEmpty) == true){
+            presenter.searchIsActive = false
+            presenter.fetchGifs(offset: 0){
+                self.collectionView.reloadData()
+            }
+        }
         presenter.searchForGifs(keyword: searchBar.text ?? ""){
             self.collectionView.reloadData()
         }
@@ -144,8 +160,7 @@ extension FeedViewController: ReloadDataProtocol{
             fetchGifs()
         }else {
             presenter.searchForGifs(keyword: searchBar.text ?? ""){
-                self.collectionView.reloadData()}
-        
+                self.collectionView.reloadData()}        
         }
     }
 }
